@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Confirmation</title>
+	<style>
+      body {
+  background-image: url(https://img5.goodfon.com/wallpaper/nbig/f/e1/tsvet-forma-fon-230.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: 100% 100%;
+}
+</style>
+</head>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1484/1484799.png">
+<body>
+	<script LANGUAGE="JavaScript">
+         function getParams(){
+                var idx = document.URL.indexOf('?');
+                var params = new Array();
+                if (idx != -1) {
+                    var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+                    for (var i=0; i<pairs.length; i++){
+                        nameVal = pairs[i].split('=');
+                        params[nameVal[0]] = nameVal[1];
+                        params[nameVal[0]] = params[nameVal[0]].replace("+", " ");
+                    }
+                }
+                return params;
+            }
+      </script>
+      <p style="color: powderblue; font-family: cursive; text-align: center;font-size: 40px;">Thank you for Registering</p><br>
+      <p style="color: powderblue; font-family: cursive;font-size: 30px;">Your response has been recorded</p>
+
+      <script>
+      	value=getParams();
+      	Name=unescape(value["Name"])
+      	document.write("<p style='color:powderblue'>Name :"+Name)
+
+      	Email=unescape(value["Email"])
+      	document.write("<p style='color:powderblue'>Email :"+Email)
+
+      	Phone=unescape(value["Phone"])
+      	document.write("<p style='color:powderblue'>Phone :"+Phone)
+      </script>
+      <br><br><br>
+
+      <p><a href="Form1.html" style="color: powderblue;font-size: 20px;">Submit another response</a></p>
+	<br><br>
+
+      <a href="Form3.html" style="color: powderblue;font-size: 20px">About This Form</a>
+
+</body>
+</html>
